@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/codemirror.css" />
+		<link rel="stylesheet" href="css/darcula.css" />
+		<script src="js/codemirror.js"></script>
+		<script src="js/codemirror modes/javascript.js"></script>
+		<script src="js/main.js"></script>
+		<title>JavaScript Web Editor</title>
+	</head>
+	<body onload="initializeCode()">
+		<div class="description">
+			I made my own javascript console since I couldn't find anything like it. Uses <a href="http://codemirror.net">CodeMirror</a> for syntax highlighting, and <a href="https://github.com/Alorel">Alorel's</a> <a href="https://github.com/Alorel/console-log-html">Console-Log-HTML Library</a> just to make the console logging easier for me <br />
+			Made by me, <a href="https://github.com/Samathingamajig">Samathingamajig</a>. <br />
+			Link to project => <a href="https://github.com/Samathingamajig/javascript-web-editor">https://github.com/Samathingamajig/javascript-web-editor</a>
+		</div>
+		<button onclick="updateIFrame()">Run Code</button>
+		<div class="code"><textarea class="codemirror-textarea"></textarea></div>
+
+		<iframe id="console" class="console"></iframe>
+	</body>
+</html>

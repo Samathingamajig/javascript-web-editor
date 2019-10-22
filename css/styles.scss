@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 0.2fr repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	height: 100vh;
+	overflow: hidden;
+	background: rgb(41, 41, 41);
+}
+.description {
+	color: rgb(206, 206, 206);
+	a {
+		color: rgb(75, 75, 238);
+	}
+	max-width: 50vw;
+	max-height: 90px;
+}
+.code {
+	grid-area: 2 / 1 / 4 / 2;
+	.CodeMirror {
+		height: 100%;
+		max-width: 50vw;
+	}
+	max-width: 50vw;
+}
+.console {
+	grid-area: 2 / 2 / 4 / 3;
+	background: rgb(36, 36, 36);
+	border: none;
+	max-width: 50vw;
+}
+
+button {
+	grid-area: 1 / 2 / 2 / 2;
+	// background: rgb(54, 170, 54);
+	// font-size: 90%;
+	// color: white;
+	font-size: 18pt;
+	max-height: 90px;
+	max-width: 50vw;
+}

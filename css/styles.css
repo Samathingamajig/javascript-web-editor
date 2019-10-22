@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 0.2fr (1fr)[2];
+      grid-template-rows: 0.2fr repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  overflow: hidden;
+  background: #292929;
+}
+
+.description {
+  color: #cecece;
+  max-width: 50vw;
+  max-height: 90px;
+}
+
+.description a {
+  color: #4b4bee;
+}
+
+.code {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 4 / 2;
+  max-width: 50vw;
+}
+
+.code .CodeMirror {
+  height: 100%;
+  max-width: 50vw;
+}
+
+.console {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 4 / 3;
+  background: #242424;
+  border: none;
+  max-width: 50vw;
+}
+
+button {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  grid-area: 1 / 2 / 2 / 2;
+  font-size: 18pt;
+  max-height: 90px;
+  max-width: 50vw;
+}
+/*# sourceMappingURL=styles.css.map */
