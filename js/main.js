@@ -36,7 +36,7 @@ function updateIFrame() {
 	// Body
 	iframeDoc.write("<body><ul class='outputs'></ul> <input id='console-input' onkeydown='consoleInput(event)'></input>");
 	// JavaScript
-	iframeDoc.write("<script> ConsoleLogHTML.connect(document.getElementsByClassName('outputs')[0], {}, false, false, true); const clear = () => document.getElementsByClassName('outputs')[0].innerHTML = ''; const enterCommand = comm => console.log('< ' + eval('' + comm.replace(/ let | const | var /, 'this.').replace(/;/, '; '), 0)); function consoleInput(e) {if (e.keyCode === 13 && document.getElementById('console-input').value.trim() !== '') {console.log('> ' + document.getElementById('console-input').value); enterCommand(' ' + document.getElementById('console-input').value);document.getElementById('console-input').value = '';}}" + editor.getValue() + " </script>");
+	iframeDoc.write("<script> ConsoleLogHTML.connect(document.getElementsByClassName('outputs')[0], {}, false, true, true); const clear = () => document.getElementsByClassName('outputs')[0].innerHTML = ''; const enterCommand = comm => console.log('< ' + eval('' + comm.replace(/ let | const | var /, 'this.').replace(/;/, '; '), 0)); function consoleInput(e) {if (e.keyCode === 13 && document.getElementById('console-input').value.trim() !== '') {console.log('> ' + document.getElementById('console-input').value); enterCommand(' ' + document.getElementById('console-input').value);document.getElementById('console-input').value = '';}}" + editor.getValue() + " </script>");
 	// Close
 	iframeDoc.write("</body></html>");
 	iframeDoc.close();
